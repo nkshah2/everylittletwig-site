@@ -6,6 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Every Little Twig",
+  description: "The power of a pocket diary now at your fingertips!",
   metadataBase: new URL("https://everylittletwig.com"),
   openGraph: {
     title: "Every Little Twig",
