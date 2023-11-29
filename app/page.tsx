@@ -2,6 +2,17 @@ import Link from 'next/link'
 import { FeatureCard } from './components/featureCard'
 import styles from './page.module.css'
 import Image from 'next/image'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Every Little Twig",
+  metadataBase: new URL("https://everylittletwig.com"),
+  openGraph: {
+    title: "Every Little Twig",
+    description: "The power of a pocket diary now at your fingertips!",
+    images: "/seo/og.png",
+  },
+}
 
 export default async function Home() {
   return (
@@ -50,9 +61,9 @@ export default async function Home() {
           <span className={styles.headerAppName}>Every Little Twig</span>
         </div>
         <div className={styles.footerSocialContainer}>
-          <Image height={36} width={36} src="/social/email.svg" alt="Logo" className={styles.footerSocialIcon} />
-          <Image height={36} width={36} src="/social/instagram.svg" alt="Logo" className={styles.footerSocialIcon} />
-          <Image height={36} width={36} src="/social/twitter.svg" alt="Logo" className={styles.footerSocialIcon} />
+          <Link target='_blank' href={"mailto:everylittletwig@technobux.io"}><Image height={36} width={36} src="/social/email.svg" alt="Logo" className={styles.footerSocialIcon} /></Link>
+          <Link target="_blank" href={"https://instagram.com/everylittletwig.india"}><Image height={36} width={36} src="/social/instagram.svg" alt="Logo" className={styles.footerSocialIcon} /></Link>
+          <Link target='_blank' href={"https://twitter.com/everylittletwig"}><Image height={36} width={36} src="/social/twitter.svg" alt="Logo" className={styles.footerSocialIcon} /></Link>
         </div>
       </div>
     </main>
