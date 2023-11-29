@@ -1,94 +1,59 @@
-import Image from 'next/image'
+import Link from 'next/link'
+import { FeatureCard } from './components/featureCard'
 import styles from './page.module.css'
+import Image from 'next/image'
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div className={styles.headerLogoContainer}>
+        <Image height={36} width={36} src="/logo.svg" alt="Logo" className={styles.headerLogo} />
+        <span className={styles.headerAppName}>Every Little Twig</span>
+      </div>
+      <div className={styles.sectionSpacing} />
+      <div className={styles.landingContainer}>
+        <div className={styles.landingLeft}>
+          <h1>Introducing <br/><span className={styles.landingAppName}>Every Little Twig</span></h1>
+          <div className={styles.landingDescription}>The power of a pocket diary now at your fingertips! Manage your daily lives together with your friends and family</div>
+          <Link href={"https://apps.apple.com/in/app/every-little-twig/id6467673413"}><div className='download-button'>Download now</div></Link>
+        </div>
+        <div className={styles.landingRight}>
+          <Image height={500} width={500} src="/landing.svg" alt="Landing" />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.sectionSpacing} />
+      <div className={styles.featuresSectionContainer}>
+        <FeatureCard type="groups"/>
+        <FeatureCard type="shopping"/>
+        <FeatureCard type="reading"/>
+        <FeatureCard type="reminders"/>
+        <FeatureCard type="more"/>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.sectionSpacing} />
+      <div className={styles.downloadSection}>
+        <div className={styles.downloadSectionLeft}>
+          <div className={styles.downloadLeftTitle}>
+            Managing your time with others has never been easier!
+          </div>
+          <div className={styles.downloadLeftSubtitle}>
+            Available on the iOS App store now! <br/>(Android coming soon)
+          </div>
+        </div>
+        <div className={styles.downloadSectionRight}>
+          <Link href={"https://apps.apple.com/in/app/every-little-twig/id6467673413"}><div className='download-button'>Download now</div></Link>
+        </div>
+      </div>
+      <div className={styles.sectionSpacing} />
+      <div className={styles.footerContainer}>
+        <div className={styles.footerLogoContainer}>
+          <Image height={36} width={36} src="/logo.svg" alt="Logo" className={styles.headerLogo} />
+          <span className={styles.headerAppName}>Every Little Twig</span>
+        </div>
+        <div className={styles.footerSocialContainer}>
+          <Image height={36} width={36} src="/social/email.svg" alt="Logo" className={styles.footerSocialIcon} />
+          <Image height={36} width={36} src="/social/instagram.svg" alt="Logo" className={styles.footerSocialIcon} />
+          <Image height={36} width={36} src="/social/twitter.svg" alt="Logo" className={styles.footerSocialIcon} />
+        </div>
       </div>
     </main>
   )
