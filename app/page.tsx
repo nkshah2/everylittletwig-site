@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Every Little Twig",
-  description: "The power of a pocket diary now at your fingertips!",
+  title: "Every Little Twig - Social Diary & Group Organizer App",
+  description: "Transform your daily planning with Every Little Twig, the ultimate social diary and group organizer app.",
   metadataBase: new URL("https://everylittletwig.com"),
   openGraph: {
     title: "Every Little Twig",
-    description: "The power of a pocket diary now at your fingertips!",
+    description: "Transform your daily planning with Every Little Twig, the ultimate social diary and group organizer app.",
     images: "/seo/og.png",
   },
 }
