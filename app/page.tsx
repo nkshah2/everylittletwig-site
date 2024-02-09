@@ -27,7 +27,7 @@ export default async function Home() {
         <div className={styles.landingLeft}>
           <h1>Introducing <br/><span className={styles.landingAppName}>Every Little Twig</span></h1>
           <div className={styles.landingDescription}>The power of a pocket diary now at your fingertips! Manage your daily lives together with your friends and family</div>
-          <Link href={"https://apps.apple.com/in/app/every-little-twig/id6467673413"}><div className='download-button'>Download now</div></Link>
+          <Link scroll href={"#downloadSection"}><div className='download-button'>Download now</div></Link>
         </div>
         <div className={styles.landingRight}>
           <Image height={500} width={500} src="/landing.svg" alt="Landing" />
@@ -42,17 +42,16 @@ export default async function Home() {
         <FeatureCard type="more"/>
       </div>
       <div className={styles.sectionSpacing} />
-      <div className={styles.downloadSection}>
+      <div id="downloadSection" className={styles.downloadSection}>
         <div className={styles.downloadSectionLeft}>
           <div className={styles.downloadLeftTitle}>
             Managing your time with others has never been easier!
           </div>
-          <div className={styles.downloadLeftSubtitle}>
-            Available on the iOS App store now! <br/>(Android coming soon)
-          </div>
         </div>
         <div className={styles.downloadSectionRight}>
-          <Link href={"https://apps.apple.com/in/app/every-little-twig/id6467673413"}><div className='download-button'>Download now</div></Link>
+          <Link href={"https://apps.apple.com/in/app/every-little-twig/id6467673413"}><div className='download-button'>Download on iOS</div></Link>
+          <div style={{width: 24}}/>
+          <Link href={"https://play.google.com/store/apps/details?id=com.tbx.everylittletwig"}><div className='download-button-outline'>Download on Android</div></Link>
         </div>
       </div>
       <div className={styles.sectionSpacing} />
